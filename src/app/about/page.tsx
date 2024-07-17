@@ -35,7 +35,7 @@ function About() {
 
                             <div>
                                 <div className="flex flex-col justify-center items-center">
-                                    <button className="text-yellow-600 py-2  border border-solid border-yellow-600 hover:bg-yellow-600 hover:text-white active:bg-yellow-600 font-bold uppercase text-xs px-4 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 ">2002</button>
+                                    <button className="text-black py-2  border border-solid border-yellow-600 hover:bg-yellow-600 hover:text-white active:bg-black font-bold uppercase text-xs px-4 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 ">2002</button>
                                 </div>
                                 <p className="text-white lg:text-black" >The first year of developing the Nankho restaurant business unit in Indonesia, specifically in the city of Subang</p>
                             </div>
