@@ -15,7 +15,7 @@ export default function Home() {
     <div className="bg-black min-h-screen">
       
       <Image className="relative"
-        src='/images/sate.jpg'
+        src='/images/sate (2).jpg'
         alt="home"
         width={900}
         height={300}

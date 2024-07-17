@@ -1,16 +1,8 @@
-import { cache } from "react";
 import Best from "./best";
 
 export default async function FetchProduct() {
-    const res = await fetch("https://cdn.contentful.com/spaces/n97sziju7b85/environments/master/entries?access_token=N-B0OwapzWOJIAxadr6A5a7HnaN1H-IgL8GrgiQG3Qc",
-        {
-            method:"GET",
-            // cache: "no-cache",
-        }
-    )
-    
+    const res = await fetch("https://cdn.contentful.com/spaces/n97sziju7b85/environments/master/entries?access_token=N-B0OwapzWOJIAxadr6A5a7HnaN1H-IgL8GrgiQG3Qc")   
     const data = await res.json()
-    console.log(data.includes.Asset[0].fields.file.url);
 
     return (
         <div className="pb-32 p-18 pt-12 flex flex-wrap  gap-9 lg:gap-3 items-center justify-center lg:justify-evenly">
@@ -33,9 +25,7 @@ export default async function FetchProduct() {
             <Best imgSrc={data.includes.Asset[12].fields.file.url} caption={data.items[19].fields.text}/>
             <Best imgSrc={data.includes.Asset[10].fields.file.url} caption={data.items[17].fields.text}/>
             <Best imgSrc={data.includes.Asset[4].fields.file.url} caption={data.items[18].fields.text}/>
-            <Best imgSrc={data.includes.Asset[18].fields.file.url} caption={data.items[16].fields.text}/>
-            
-           
+            <Best imgSrc={data.includes.Asset[18].fields.file.url} caption={data.items[16].fields.text}/>          
         </div>
     )
 }
