@@ -12,12 +12,12 @@ export const metadata = {
 export default function Home() {
   return (
 
-    <div className="bg-black min-h-screen">
+    <div className="bg-black ">
       
-      <Image className="relative"
+      <Image className="relative h-[300px]"
         src='/images/sate (2).jpg'
         alt="home"
-        width={900}
+        width={600}
         height={300}
         layout="responsive"
 
