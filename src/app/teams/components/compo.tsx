@@ -1,9 +1,20 @@
 import Image from "next/image"
 
+interface IProps {
+    name: {
+        first: string
+        last: string
+    }
+    email: string
+
+    picture: {
+        medium:string
+    }
+    phone: string
+}
+
 export default async function FetchingData() {
-    const res = await fetch(`https://randomuser.me/api/?results=8`, {
-        method: "GET"
-    })
+    const res = await fetch(`https://randomuser.me/api/?results=8`)
     const data = await res.json()
 
     return (
@@ -12,8 +23,8 @@ export default async function FetchingData() {
              <hr className="h-0.5 flex-grow bg-yellow-600 dark:bg-white" />
             <div className="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-3  p-6 ">
                 {
-                    data.results.map((item: any, idx: any) => (
-                        <div className="items-center flex flex-col pt-16 pb-14" key={idx}>
+                    data.results.map((item: IProps, idx: number) => (
+                        <div className="items-center flex flex-col pt-16 pb-14" key={item.email}>
                             <Image src={item.picture.medium} width={200} height={200} alt="team1" className="rounded-[14px]"/>
                             <p className="text-white font-serif">{item.name.first} {item.name.last}</p>
                             <p className="text-white">{item.email}</p>
